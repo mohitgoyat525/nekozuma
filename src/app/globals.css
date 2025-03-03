@@ -67,3 +67,233 @@ transition: all ease-in 300ms;
  .max-w-kakashi{
   max-width: 564px;
  }
+
+ /* Custom styles for header */
+.navbar-brand {
+    font-size: 21.64px;
+    line-height: 113%;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+/* Custom hover effect for links */
+.link-hover {
+    transition: transform 0.3s ease-in-out 0.15s;
+}
+
+.link-hover:hover {
+    transform: scale(1.1);
+}
+
+/* Custom hover effect for social icons */
+.social-hover {
+    transition: transform 0.3s ease-in-out 0.15s;
+    display: inline-block;
+}
+
+.social-hover:hover {
+    transform: scale(1.2);
+}
+
+/* Custom hamburger menu animation */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    width: 28px;
+    height: 24px;
+    position: relative;
+    transition: all 0.3s;
+    background-image: none !important;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.navbar-toggler-icon::before {
+    top: 0;
+}
+
+.navbar-toggler-icon span {
+    top: 10px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+.navbar-toggler-icon.open::before {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.navbar-toggler-icon.open span {
+    opacity: 0;
+}
+
+.navbar-toggler-icon.open::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile menu styles */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #1c2430;
+        z-index: 30;
+        transition: transform 0.3s;
+        transform: translateY(-100%);
+    }
+
+    .navbar-collapse.show {
+        transform: translateY(0);
+    }
+
+    .navbar-nav {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+}
+
+/* Assuming ff-franklin is a custom font */
+/* Custom CSS for classes not available in Bootstrap */
+.mw-1140 {
+    max-width: 1140px;
+}
+
+.mt-custom-50 {
+    margin-top: 50px;
+}
+
+.fs-45 {
+    font-size: 45px;
+}
+
+.fs-md-64 {
+    font-size: 64px;
+}
+
+.max-w-320{
+  max-width: 320px;
+}
+
+.lh-113 {
+    line-height: 113%;
+}
+
+.lh-130 {
+    line-height: 130%;
+}
+
+.text-light-custom {
+    color: #D4E5FF;
+}
+
+.mw-502 {
+    max-width: 502px;
+}
+
+.rounded-9 {
+    border-radius: 9px;
+}
+
+.btn-custom {
+    background-color: #245AAB;
+}
+
+.btn-custom:hover {
+    background-color: #fff;
+    color: #245AAB;
+    transform: scale(1.1);
+}
+
+.transition-all {
+    transition: all 500ms ease-in-out;
+}
+
+.hover-scale-110:hover {
+    transform: scale(1.1);
+}
+
+.mw-564 {
+    max-width: 564px !important;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+/* Assuming ff-franklin is a custom font */
+.ff-franklin {
+    font-family: 'Franklin Gothic', sans-serif; /* Replace with actual font */
+}
+
+.z-5{
+  z-index: 10;
+}
+
+.slide-scroll {
+    animation: slide 20s linear infinite;
+}
+
+.slide-scroll:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.slide-scroll-left{
+  animation: slide-left 20s linear infinite;
+}
+
+.slide-scroll-left:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 991px) {
+    .fs-md-64 {
+        font-size: 45px;
+    }
+}
