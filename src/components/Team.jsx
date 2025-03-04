@@ -6,8 +6,8 @@ const Team = () => {
   return (
     <div id="team" className="max-w-8xl mx-auto">
       <div className="story-line mx-auto"></div>
-      <h2 className="text-center fw-normal font-franklin fs-xl m-0">Team</h2>
-      <div className="d-flex flex-wrap justify-content-center gap-3 mt-4 m-0">
+      <h2 className="text-center fw-bold font-franklin fs-xl m-0">Team</h2>
+      <div className="d-flex flex-wrap justify-content-center gap-3 custom-mt-3xl">
         {TEAM_LIST.map((obj, i) => (
           <div key={i} className="max-w-2xl w-100">
             <Image

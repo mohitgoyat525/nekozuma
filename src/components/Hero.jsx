@@ -9,7 +9,7 @@ const Hero = () => {
       <Header />
       <div className="d-flex align-items-center position-relative hero-section-parent justify-content-center">
         <div className="container position-relative z-1">
-          <h1 className="hero-heading font-franklin m-0">NEKOZUMA</h1>
+          <h1 className="hero-heading font-franklin m-0 fw-bold">NEKOZUMA</h1>
           <p className="m-0 custom-description max-md-center">
             The collection of 5555 NFTs on the Solana blockchain. The collection
             serves to be a rising force against the anime meta of collections
