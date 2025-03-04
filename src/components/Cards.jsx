@@ -4,7 +4,7 @@ import { CARDS_IMG } from '@/utils/helper'
 const Cards = () => {
   return (
     <>
-      <div className="overflow-hidden">
+      <div id='overview' className="overflow-hidden">
         <div className="d-flex align-items-center slide-scroll mx-auto justify-content-center">
           {CARDS_IMG.map((obj, i) => (
             <Image

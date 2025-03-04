@@ -5,11 +5,11 @@ export const HEADER_LIST = [
   },
   {
     name: "Story",
-    link: "/story",
+    link: "#story",
   },
   {
     name: "Team",
-    link: "/team",
+    link: "#team",
     },
     
 ];

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 const Team = () => {
   return (
-    <div className="max-w-8xl mx-auto">
+    <div id="team" className="max-w-8xl mx-auto">
       <div className="story-line mx-auto"></div>
       <h2 className="text-center fw-normal ff-franklin fs-xl m-0">Team</h2>
       <div className="d-flex flex-wrap justify-content-center gap-3 mt-4 m-0">

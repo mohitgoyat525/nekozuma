@@ -7,10 +7,14 @@ import Image from "next/image";
 const Header = () => {
 
   const [open, setOpen] = useState(false);
-   useEffect(() => {
-     document.body.style.overflow = open ? "hidden" : "auto";
-   }, [open]);
-  
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      document.body.style.overflow = open ? "hidden" : "auto";
+    } else {
+      document.body.style.overflow = "auto"; // Ensure overflow is reset on larger screens
+    }
+  }, [open]);
   return (
     <div className="position-relative  align-items-center w-100 d-flex justify-content-between navbar-parent">
       <Link href="#" className="position-absolute navbar-logo">

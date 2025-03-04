@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 const Story = () => {
     return (
-      <div className="">
+      <div id="story">
         <div className="container mx-auto mt-5">
           <h2 className="text-center fw-normal ff-franklin fs-xl m-0">Story</h2>
           <p className="fw-normal max-w-4xl mx-auto custom-description text-center pt-3 m-0">
