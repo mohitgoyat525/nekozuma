@@ -6,7 +6,7 @@ const Team = () => {
   return (
     <div id="team" className="max-w-8xl mx-auto">
       <div className="story-line mx-auto"></div>
-      <h2 className="text-center fw-normal ff-franklin fs-xl m-0">Team</h2>
+      <h2 className="text-center fw-normal font-franklin fs-xl m-0">Team</h2>
       <div className="d-flex flex-wrap justify-content-center gap-3 mt-4 m-0">
         {TEAM_LIST.map((obj, i) => (
           <div key={i} className="max-w-2xl w-100">
@@ -17,7 +17,7 @@ const Team = () => {
               height={202}
               className="w-100 max-w-2xl pointer-event-none"
             />
-            <h3 className="text-center fw-normal ff-franklin fs-lg pt-4 text-blue m-0 pb-2">
+            <h3 className="text-center fw-normal font-franklin fs-custom-xxl pt-4 text-blue m-0 pb-2">
               {obj.tittle}
             </h3>
             <p className="text-xs text-center fw-normal p-0 m-0 ">{obj.name}</p>

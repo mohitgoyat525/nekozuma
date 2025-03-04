@@ -13,13 +13,13 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Sarabun", sans-serif !important;
   background-color: #1c2430 !important;
   scroll-behavior: smooth !important;
 }
 
 .font-franklin {
-  font-family: "franklin", sans-serif;
+  font-family: "franklin", sans-serif !important;
 }
 
 .media-icon {
@@ -124,7 +124,8 @@ body {
   background-color: #245aab;
   border-radius: 9px;
   border: 1px solid transparent;
-  padding: 8px 24px;
+  min-width: 154px;
+  height: 37px; 
   line-height: 130%;
   margin-top: 43px;
   transition: all 300ms linear;
@@ -230,6 +231,10 @@ margin-bottom: 56px !important;
 
 .fs-custom-xl{
     font-size: 21.64px;
+}
+
+.fs-custom-xxl{
+    font-size: 24px !important;
 }
 
 .footer-bg-img{

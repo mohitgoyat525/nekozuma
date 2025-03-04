@@ -12,7 +12,7 @@ const Header = () => {
     if (window.innerWidth < 768) {
       document.body.style.overflow = open ? "hidden" : "auto";
     } else {
-      document.body.style.overflow = "auto"; // Ensure overflow is reset on larger screens
+      document.body.style.overflow = "auto"; 
     }
   }, [open]);
   return (
@@ -48,8 +48,8 @@ const Header = () => {
                   className="media-icon"
                   src={obj.name}
                   alt="media icon"
-                  width={29}
-                  height={29}
+                  width={24}
+                  height={24}
                 />
               </Link>
             ))}
