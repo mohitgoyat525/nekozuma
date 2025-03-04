@@ -107,10 +107,6 @@ body {
   margin: 0 auto;
 }
 
-.pointer-event-none {
-  pointer-events: none;
-}
-
 .hero-section-parent .container {
   padding-left: 170px;
   padding-top: 80px;
@@ -231,7 +227,7 @@ body {
     width: 460px;
     height: 100%;
   }
-  
+
   .blue-box {
     height: 273px !important;
     width: 494px !important;
