@@ -126,7 +126,13 @@ body {
     font-family: 'Franklin Gothic', sans-serif; /* Replace with actual font */
 }
 
+.max-w-2xl{
+    max-width: 202px;
+}
 
+.text-blue{
+    color: #3586FF !important;
+}
 
 .slide-scroll {
     animation: slide 20s linear infinite;
@@ -189,8 +195,20 @@ body {
     padding-top: 36px !important;
 }
 
+.max-w-8xl{
+    max-width: 880px;
+}
+
+.max-w-sm{
+    max-width: 20px;
+}
+
 .mt-5xl{
     margin-top: 58px !important;
+}
+
+.mt-6xl{
+    margin-top: 64px !important;
 }
 
 .story-line{
@@ -199,6 +217,18 @@ height: 1px !important;
 border: 1px solid #3586FF;
 margin-top: 61px !important;
 margin-bottom: 56px !important;
+}
+
+.fs-custom-xl{
+    font-size: 21.64px;
+}
+
+.footer-bg-img{
+    background-image: url('/assets/images/png/footer-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 174px;
 }
 
 /* =========== RESPONSIVE =========== */
@@ -241,7 +271,7 @@ margin-bottom: 56px !important;
 }
 
 @media (max-width: 767.98px) {
-  /* ==== NAV BAR RESPONSIVE ==== */
+  /* --------------- NAV BAR RESPONSIVE------------ */
   .nav-logo img {
     width: 270px;
     height: 70px;
@@ -256,7 +286,7 @@ margin-bottom: 56px !important;
     transition: all 300ms linear;
   }
 
-  /* ==== HERO SECTION RESPONSIVE */
+  /*--------------HERO SECTION RESPONSIVE-------------- */
 
   .hero-parent .container {
     padding: 45px 20px 0px;

@@ -38,11 +38,67 @@ export const CARDS_IMG = [
 
 export const TEAM_LIST = [
   {
-    image: "",
+    image: "/assets/images/webp/team-img-one.webp",
     tittle: "Founder",
     name: "Jedi Trinupab ",
     description:
       "However at every junction in time, there is always a darkness that is waiting to overthrow ",
-    
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-two.webp",
+    tittle: "Co Founder",
+    name: "Suptoshi ",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-three.webp",
+    tittle: "Artist",
+    name: "Korn",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-four.webp",
+    tittle: "Development",
+    name: "Karmic Labs",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-five.webp",
+    tittle: "Position",
+    name: "Jedi Trinupab ",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-six.webp",
+    tittle: "Position",
+    name: "Jedi Trinupab ",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-seven.webp",
+    tittle: "Position",
+    name: "Jedi Trinupab ",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
+  },
+  {
+    image: "/assets/images/webp/team-img-eight.webp",
+    tittle: "Position",
+    name: "Jedi Trinupab ",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    socialIcon: "/assets/images/svg/twitter-icon.svg",
   },
 ];
