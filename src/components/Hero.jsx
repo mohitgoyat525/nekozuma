@@ -17,34 +17,34 @@ const Hero = () => {
             NFT & Karmic Labs.
           </p>
           <div className="max-md-btn-center">
-            <button className="text-white fw-normal hero-button d-flex align-items-center justify-content-center">
+            <button className="text-white fw-normal hero-button d-flex align-items-center justify-content-center border-1">
               Connect Wallet
             </button>
           </div>
         </div>
         <Image
-          className="position-relative z-1 pointer-event-none"
+          className="position-relative z-1 pe-none"
           src="/assets/images/webp/kakashi-cat.webp"
           alt="kakashi cat"
           width={556}
           height={556}
         />
         <Image
-          className="position-absolute bottom-0 start-0 user-select-none hero-left-thunder pointer-event-none"
+          className="position-absolute bottom-0 start-0 user-select-none hero-left-thunder pe-none"
           src="/assets/images/webp/hero-left-thunder.webp"
           alt="left vector"
           width={355}
           height={411}
         />
         <Image
-          className="position-absolute end-0 bottom-0 z-1 hero-right-thunder pointer-event-none"
+          className="position-absolute end-0 bottom-0 z-1 hero-right-thunder pe-none"
           src="/assets/images/webp/hero-right-thunder.webp"
           alt="right-thunder"
           width={564}
           height={543}
         />
         <Image
-          className="position-absolute end-0 bottom-0 blue-box pointer-event-none"
+          className="position-absolute end-0 bottom-0 blue-box pe-none"
           src="/assets/images/webp/blue-box.webp"
           alt="layer"
           width={640}

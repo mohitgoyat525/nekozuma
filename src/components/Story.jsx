@@ -4,7 +4,7 @@ const Story = () => {
     return (
       <div id="story">
         <div className="container mx-auto mt-5">
-          <h2 className="text-center fw-bold font-franklin fs-xl m-0">
+          <h2 className="text-center fw-bold font-franklin fs-xl text-blue m-0">
             Story
           </h2>
           <p className="fw-normal max-w-4xl mx-auto custom-description text-center pt-3 m-0">
@@ -15,7 +15,7 @@ const Story = () => {
             are 3 deities that are all powerful and are meant to protect the
             world of Nekos.
           </p>
-          <p className="fw-normal max-w-4xl mx-auto text-xs text-center pt-3xl m-0">
+          <p className="fw-normal max-w-4xl mx-auto common-decprition text-center story-text-pt m-0">
             However at every junction in time, there is always a darkness that
             is waiting to overthrow the good. Hence, each timeline has its own
             arch nemesis. This means that there will be a total of 4 godly nekos
@@ -29,7 +29,7 @@ const Story = () => {
             alt="cat-battle"
             width={1280}
             height={357}
-            className="w-100 mt-5xl max-md-h-xl mx-auto pointer-event-none"
+            className="w-100 cat-battle-mt max-md-h-xl mx-auto pe-none"
             style={{ maxWidth: "1920px" }}
           />
         </div>

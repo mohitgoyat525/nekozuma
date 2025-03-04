@@ -27,7 +27,7 @@ const Header = () => {
       </Link>
       <div className="container d-flex justify-content-center pt-md-0 pt-2 mt-md-0 mt-4 justify-content-md-end ">
         <div
-          className={`d-flex align-items-center  flex-column end-md-0 navbar-link-parent z-2 flex-md-row justify-content-center ${
+          className={`d-flex align-items-center  flex-column end-md-0 navbar-link-parent navbar-pr z-2 flex-md-row justify-content-center ${
             open ? "start-0" : "start-100"
           }`}
         >
@@ -38,7 +38,7 @@ const Header = () => {
               href={obj.link}
               className="text-decoration-none navbar-link text-white fw-normal"
             >
-              {obj.name}
+              {obj.title}
             </Link>
           ))}
           <div className="d-flex gap-3">
@@ -46,7 +46,7 @@ const Header = () => {
               <Link key={i} href={obj.link} target="_blank">
                 <Image
                   className="media-icon"
-                  src={obj.name}
+                  src={obj.img}
                   alt="media icon"
                   width={24}
                   height={24}

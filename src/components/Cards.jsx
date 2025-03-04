@@ -1,37 +1,44 @@
-import React from 'react'
-import Image from 'next/image'
-import { CARDS_IMG } from '@/utils/helper'
+import React from "react";
+import Image from "next/image";
+import { CARDS_IMG } from "@/utils/helper";
+import Marquee from "react-fast-marquee";
+
 const Cards = () => {
   return (
-    <>
-      <div id='overview' className="overflow-hidden">
-        <div className="d-flex align-items-center slide-scroll mx-auto justify-content-center">
+    <div id="overview" className="overflow-hidden w-100">
+      <div className="d-flex align-items-center justify-content-center">
+        <Marquee direction="left" speed={50} pauseOnHover={true}>
           {CARDS_IMG.map((obj, i) => (
-            <Image
-              src={obj}
-              key={i}
-              width={320}
-              height={320}
-              alt="cats"
-              className="w-100 max-w-320 mx-auto max-md-h-xl pointer-event-none"
-            />
+            <div key={i}>
+              <Image
+                src={obj}
+                width={320}
+                height={320}
+                alt="carousel item"
+                className="img-fluid pe-none"
+              />
+            </div>
           ))}
-        </div>
-        <div className="d-flex flex-row-reverse align-items-center slide-scroll-left">
-          {CARDS_IMG.map((obj, i) => (
-            <Image
-              src={obj}
-              key={i}
-              width={320}
-              height={320}
-              className="w-100 max-w-320  max-md-h-xl pointer-event-none"
-              alt="cats"
-            />
-          ))}
-        </div>
+        </Marquee>
       </div>
-    </>
-  );
-}
 
-export default Cards
+      <div className="d-flex flex-row-reverse align-items-center justify-content-center">
+        <Marquee direction="right" speed={50} pauseOnHover={true}>
+          {CARDS_IMG.map((obj, i) => (
+            <div key={i}>
+              <Image
+                src={obj}
+                width={320}
+                height={320}
+                alt="carousel item"
+                className="img-fluid pe-none"
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
+    </div>
+  );
+};
+
+export default Cards;
