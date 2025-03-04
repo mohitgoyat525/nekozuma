@@ -23,8 +23,9 @@ const Hero = () => {
         <Image
           className="position-relative z-1"
           src="/assets/images/webp/kakashi-cat.webp"
-          width={557}
-          height={557}
+          alt="kakashi cat"
+          width={556}
+          height={556}
         />
         <Image
           className="position-absolute bottom-0 start-0 user-select-none left-vector"
@@ -36,12 +37,14 @@ const Hero = () => {
         <Image
           className="position-absolute end-0 bottom-0 z-1 right-vector"
           src="/assets/images/webp/hero-right-vector.webp"
+          alt="right-thunder"
           width={564}
           height={543}
         />
         <Image
           className="position-absolute end-0 bottom-0 blue-box"
           src="/assets/images/webp/blue-box.webp"
+          alt="layer"
           width={640}
           height={273}
         />
