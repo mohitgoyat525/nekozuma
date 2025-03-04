@@ -4,247 +4,121 @@
   font-family: "Franklin Gothic Heavy";
   src: url('/assets/fonts/Franklin\ Gothic\ Heavy\ Regular.ttf');
 }
- *{
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-   font-family: "Sarabun", sans-serif;
-      text-decoration: none !important;
- }
- body{
-  background-color: #1C2430 !important;
- }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #1c2430 !important;
+}
+.font-franklin {
+  font-family: "franklin", sans-serif;
+}
+.media-icon {
+  width: 24px;
+}
+.toggle-button {
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  transition: all 300ms linear;
+}
+.open {
+  transform: translateY(4px) rotate(45deg);
+}
+.open-two {
+  transform: translateY(-5px) rotate(-45deg);
+}
+/* Navbar style */
+.nav-parent {
+  max-width: 1921px;
+  margin: 0 auto;
+}
+.nav-logo {
+  top: 0;
+  left: 0;
+}
 
- .gap-custom-3xl{
+.nav-logo img {
+  max-width: 371px;
+  height: 81px;
+}
+
+.nav-link-parent {
   gap: 32px;
- }
-
- .container{
-  max-width: 1140px !important;
- }
-
- .line{
-  width: 164px;
-  height: 1px;
-  border: 1px solid #3586FF
- }
-
- .hero-heading{
-  font-family: Franklin Gothic Heavy;
-font-weight: 400;
-font-size: 64px;
-line-height: 72.56px;
-color: #3586FF;
- }
-
- .hero-description{
-  color:#D4E5FF;
-line-height: 20.8px;
-max-width: 502px;
-padding-bottom: 43px !important;
- }
-
- .hero-button{
- width: 154px;
-height: 37px;
-border-radius: 9px;
-line-height: 20.8px;
-background: #245AAB;
-border: none;
-border:transparent;
-color: white;
-transition: all ease-in 300ms;
- }
-
- .hero-button:hover{
-  background-color: #3586FF;
- }
-
- .mt-custom-4xl{
-  margin-top: 143px !important;
- }
-
- .max-w-kakashi{
-  max-width: 564px;
- }
-
- /* Custom styles for header */
-.navbar-brand {
-    font-size: 21.64px;
-    line-height: 113%;
-    color: white !important;
+  padding-top: 31px;
 }
 
 .nav-link {
-    color: white !important;
-    font-size: 16px;
-    line-height: 130%;
+  font-size: 16px;
+  line-height: 130%;
+  position: relative;
+  transition: all 300ms ease-in-out;
 }
 
-/* Custom hover effect for links */
-.link-hover {
-    transition: transform 0.3s ease-in-out 0.15s;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: -2px;
+  left: 0;
+  transition: width 300ms ease-in-out;
 }
 
-.link-hover:hover {
-    transform: scale(1.1);
+.nav-link:hover::after {
+  width: 100%;
 }
 
-/* Custom hover effect for social icons */
-.social-hover {
-    transition: transform 0.3s ease-in-out 0.15s;
-    display: inline-block;
+/* =========== HERO SECTION ========= */
+.hero-heading {
+  font-size: 64px;
+  line-height: 113%;
+  color: #3586ff;
+  font-weight: 400;
+  position: relative;
+}
+.hero-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 164px;
+  height: 1px;
+  background-color: #3586ff;
+}
+.hero-parent {
+  padding-top: 29px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.hero-parent .container {
+  padding-left: 170px;
+  padding-top: 80px;
 }
 
-.social-hover:hover {
-    transform: scale(1.2);
+.hero-parent .container p {
+  max-width: 509px;
+  padding-top: 10px;
+}
+.hero-button {
+  background-color: #245aab;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  padding: 8px 24px;
+  line-height: 130%;
+  margin-top: 43px;
+  transition: all 300ms linear;
 }
 
-/* Custom hamburger menu animation */
-.navbar-toggler {
-    border: none;
-    padding: 0;
-}
-
-.navbar-toggler-icon {
-    width: 28px;
-    height: 24px;
-    position: relative;
-    transition: all 0.3s;
-    background-image: none !important;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after,
-.navbar-toggler-icon span {
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-.navbar-toggler-icon::before {
-    top: 0;
-}
-
-.navbar-toggler-icon span {
-    top: 10px;
-}
-
-.navbar-toggler-icon::after {
-    bottom: 0;
-}
-
-.navbar-toggler-icon.open::before {
-    transform: rotate(45deg) translate(7px, 7px);
-}
-
-.navbar-toggler-icon.open span {
-    opacity: 0;
-}
-
-.navbar-toggler-icon.open::after {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-
-/* Mobile menu styles */
-@media (max-width: 767px) {
-    .navbar-collapse {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: #1c2430;
-        z-index: 30;
-        transition: transform 0.3s;
-        transform: translateY(-100%);
-    }
-
-    .navbar-collapse.show {
-        transform: translateY(0);
-    }
-
-    .navbar-nav {
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    .nav-item {
-        margin: 1rem 0;
-    }
-}
-
-/* Assuming ff-franklin is a custom font */
-/* Custom CSS for classes not available in Bootstrap */
-.mw-1140 {
-    max-width: 1140px;
-}
-
-.mt-custom-50 {
-    margin-top: 50px;
-}
-
-.fs-45 {
-    font-size: 45px;
-}
-
-.fs-md-64 {
-    font-size: 64px;
-}
-
-.max-w-320{
-  max-width: 320px;
-}
-
-.lh-113 {
-    line-height: 113%;
-}
-
-.lh-130 {
-    line-height: 130%;
-}
-
-.text-light-custom {
-    color: #D4E5FF;
-}
-
-.mw-502 {
-    max-width: 502px;
-}
-
-.rounded-9 {
-    border-radius: 9px;
-}
-
-.btn-custom {
-    background-color: #245AAB;
-}
-
-.btn-custom:hover {
-    background-color: #fff;
-    color: #245AAB;
-    transform: scale(1.1);
-}
-
-.transition-all {
-    transition: all 500ms ease-in-out;
-}
-
-.hover-scale-110:hover {
-    transform: scale(1.1);
-}
-
-.mw-564 {
-    max-width: 564px !important;
-}
-
-.font-normal {
-    font-weight: 400;
+.hero-button:hover {
+  background-color: white;
+  border: 1px solid #3586ff;
+  color: #3586ff !important;
 }
 
 /* Assuming ff-franklin is a custom font */
@@ -252,9 +126,7 @@ transition: all ease-in 300ms;
     font-family: 'Franklin Gothic', sans-serif; /* Replace with actual font */
 }
 
-.z-5{
-  z-index: 10;
-}
+
 
 .slide-scroll {
     animation: slide 20s linear infinite;
@@ -297,3 +169,35 @@ transition: all ease-in 300ms;
         font-size: 45px;
     }
 }
+
+.fs-xl{
+    font-size: 43px;
+    color:#3586FF;
+}
+
+.text-xs{
+    font-size: 14px;
+    line-height: 20.8px;
+    color: #D4E5FF;
+}
+
+.max-w-4xl{
+    max-width: 888px;
+}   
+
+.pt-3xl{
+    padding-top: 36px !important;
+}
+
+.mt-5xl{
+    margin-top: 58px !important;
+}
+
+.story-line{
+width: 164px;
+height: 1px !important;
+border: 1px solid #3586FF;
+margin-top: 61px !important;
+margin-bottom: 56px !important;
+}
+

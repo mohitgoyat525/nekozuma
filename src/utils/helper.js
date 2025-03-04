@@ -35,3 +35,14 @@ export const CARDS_IMG = [
   "/assets/images/webp/cat-img-seven.webp",
   "/assets/images/webp/cat-img-eight.webp",
 ]
+
+export const TEAM_LIST = [
+  {
+    image: "",
+    tittle: "Founder",
+    name: "Jedi Trinupab ",
+    description:
+      "However at every junction in time, there is always a darkness that is waiting to overthrow ",
+    
+  },
+];

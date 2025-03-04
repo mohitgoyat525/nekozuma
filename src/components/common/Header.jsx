@@ -1,84 +1,50 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { HEADER_LIST, MEDIA_ICON_LIST, NAVBAR_LIST, SOCIAL_LIST } from "@/utils/helper";
 import Link from "next/link";
+import React, { useState } from "react";
 import Image from "next/image";
-import { HEADER_LIST, SOCIAL_LIST } from "@/utils/helper";
-import layer_blue from "../../../public/assets/images/png/blue-layer.png";
-import discord from "../../../public/assets/images/svg/discord-icon.svg";
-import twitter from "../../../public/assets/images/svg/twitter-icon.svg";
+
 const Header = () => {
-  const [nav, setNav] = useState(false);
-
-  const handleClick = () => {
-    setNav(!nav);
-  };
-
-  useEffect(() => {
-    if (nav && window.innerWidth < 768) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [nav]);
-
+  const [open, setOpen] = useState(false);
   return (
-    <div className="position-relative">
-      <div className="position-absolute start-0 top-0">
-        <Image src='/assets/images/png/blue-layer.png' alt="layer" width={250} height={45} />
-      </div>
-      <nav className="navbar navbar-expand-md navbar-dark container-fluid px-4">
-        <div className="container mx-auto" style={{ maxWidth: "1140px" }}>
-          <Link href="/" className="navbar-brand z-10 py-3 ff-franklin">
-            NEKOZUMA
-          </Link>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="navbar-toggler z-40"
-            type="button"
-            onClick={handleClick}
-          >
-            <span className={`navbar-toggler-icon ${nav ? "open" : ""}`}></span>
-          </button>
-
-          {/* Navbar Menu */}
-          <div className={`collapse navbar-collapse ${nav ? "show" : ""}`}>
-            <ul className="navbar-nav mx-auto mb-2 mb-md-0">
-              {HEADER_LIST.map((obj, index) => (
-                <li key={index} className="nav-item">
-                  <a
-                    onClick={handleClick}
-                    href={obj.link}
-                    className="nav-link text-white link-hover"
-                  >
-                    {obj.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <ul className="navbar-nav ms-auto d-flex align-items-center">
-              <li className="nav-item">
-                <Link
-                  onClick={handleClick}
-                  className="nav-link social-hover"
-                  href="/discord"
-                >
-                  <Image width={29} height={29} src='/assets/images/svg/discord-icon.svg' alt="discord" />
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  onClick={handleClick}
-                  className="nav-link social-hover"
-                  href="/twitter"
-                >
-                  <Image width={29} height={29} src='/assets/images/svg/twitter-icon.svg' alt="twitter" />
-                </Link>
-              </li>
-            </ul>
+    <div className="position-relative w-100 d-flex justify-content-between align-items-center nav-parent">
+      <Link href="#" className="position-absolute nav-logo">
+        <Image src="/assets/images/png/logo-bg.png" alt="logo" width={355} height={55} />
+      </Link>
+      <div className="container d-flex justify-content-md-end justify-content-center pt-md-0 pt-2 mt-md-0 mt-4">
+        <div
+          className={`d-flex align-items-center flex-md-row justify-content-center flex-column end-md-0 nav-link-parent z-2 ${
+            open ? "start-0" : "start-100"
+          }`}
+        >
+          {HEADER_LIST.map((obj, i) => (
+            <Link
+              onClick={() => setOpen(!open)}
+              key={i}
+              href={obj.link}
+              className="text-decoration-none text-white fw-normal nav-link"
+            >
+              {obj.name}
+            </Link>
+          ))}
+          <div className="d-flex gap-3">
+            {SOCIAL_LIST.map((obj, i) => (
+              <Link key={i} href={obj.link} target="_blank">
+                <Image className="media-icon" src={obj.name} alt="media icon" width={29} height={29} />
+              </Link>
+            ))}
           </div>
         </div>
-      </nav>
+        <div
+          onClick={() => setOpen(!open)}
+          className="w-100 d-flex gap-2 flex-column d-md-none justify-content-center align-items-end w-100 z-3"
+        >
+          <span className={`toggle-button ${open ? "open" : "close"}`}></span>
+          <span
+            className={`toggle-button ${open ? "open-two" : "close"}`}
+          ></span>
+        </div>
+      </div>
     </div>
   );
 };
