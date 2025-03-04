@@ -11,9 +11,9 @@ const Cards = () => {
               src={obj}
               key={i}
               width={320}
-                  height={320}
-                  alt='cats'
-              className="w-100 max-w-320 mx-auto"
+              height={320}
+              alt="cats"
+              className="w-100 max-w-320 mx-auto max-md-h-xl pointer-event-none"
             />
           ))}
         </div>
@@ -24,8 +24,8 @@ const Cards = () => {
               key={i}
               width={320}
               height={320}
-                  className="w-100 max-w-320 "
-                  alt='cats'
+              className="w-100 max-w-320  max-md-h-xl pointer-event-none"
+              alt="cats"
             />
           ))}
         </div>
